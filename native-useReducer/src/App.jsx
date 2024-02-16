@@ -36,11 +36,7 @@ function NameList() {
         case "SET_NAME":
           return { ...state, name: action.payload };
         case "ADD_NAME":
-          return {
-            ...state,
-            names: [...state.names, state.name],
-            name: "",
-          };
+          return { ...state, name: [...state.names, state.name], name: "" };
       }
     },
     {
@@ -48,7 +44,6 @@ function NameList() {
       name: "",
     }
   );
-
   return (
     <div className="App">
       <div>

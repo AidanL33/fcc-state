@@ -1,4 +1,5 @@
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
+import { useRef, useEffect } from "react";
 
 function App() {
   const inputRef = useRef(null);

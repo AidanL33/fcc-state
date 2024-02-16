@@ -25,7 +25,7 @@ function App() {
       .then((data) => setNames(data));
   }, []);
 
-  const [seletedNameDetails, setSelectedNameDetails] = useState(null);
+  const [selectedNameDetails, setSelectedNameDetails] = useState(null);
 
   const onSelectedNameChange = (name) => {
     fetch(`/${name}.json`)
@@ -41,7 +41,7 @@ function App() {
           <button onClick={() => onSelectedNameChange(name)}>{name}</button>
         ))}
       </div>
-      <div>{JSON.stringify(seletedNameDetails)}</div>
+      <div>{JSON.stringify(selectedNameDetails)}</div>
     </div>
   );
 }

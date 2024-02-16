@@ -1,7 +1,7 @@
 import { useState, useMemo, useCallback } from "react";
 
 function SortedList({ list, sortFunc }) {
-  console.log("SortedList render");
+  console.log("SortedList Render");
 
   const sortedList = useMemo(() => {
     console.log("Running sort");
@@ -34,7 +34,7 @@ function App() {
       <div>Names: {names.join(", ")}</div>
       <SortedList list={names} sortFunc={sortFunc} />
       <button onClick={() => setCount1(count1 + 1)}>Count1: {count1}</button>
-      <button onClick={() => setCount2(count2 + 1)}>Count2: {count2}</button>
+      <button onClick={() => setCount2(count2 + 1)}>Count1: {count1}</button>
       <div>Total: {countTotal}</div>
     </>
   );
